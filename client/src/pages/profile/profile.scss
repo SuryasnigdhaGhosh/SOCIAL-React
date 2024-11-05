@@ -1,0 +1,165 @@
+@import "../../style.scss";
+
+.profile {
+    @include themify($themes) {
+
+
+        background-color: themed("bgSoft");
+
+        .images {
+            width: 100%;
+            height: 300px;
+            position: relative;
+
+            .cover {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                overflow: hidden;
+
+            }
+
+            .profilePic {
+                width: 200px;
+                height: 200px;
+                border-radius: 50%;
+                object-fit: cover;
+                position: absolute;
+                left: 0;
+                right: 0;
+                margin: auto;
+                top: 200px;
+            }
+        }
+
+        .profileContainer {
+            padding: 20px 70px;
+
+            @include mobile {
+                padding: 10px;
+            }
+
+
+
+
+
+            .uInfo {
+                height: 180px;
+                -webkit-box-shadow: 0px 0px 25px -10px rgba(0, 0, 0, 0.38);
+                -moz-box-shadow: 0px 0px 25px -10px rgba(0, 0, 0, 0.38);
+                box-shadow: 0px 0px 25px -10px #00000061;
+                border-radius: 20px;
+                background-color: themed("bg");
+                color: themed("textColor");
+                padding: 60px 50px 20px 50px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin-bottom: 20px;
+
+                @include mobile {
+                    flex-direction: column;
+                    height: 25vh;
+                    padding: 20px;
+                    padding-top: 100px;
+                    
+                }
+
+
+
+                .left {
+                    display: flex;
+                    flex-wrap: wrap;
+                    flex: 1;
+                    gap: 5px;
+
+
+                    @include mobile{
+                        gap: 15px;
+                    }
+                    
+
+
+
+                    a {
+                        color: themed("textColorsoft");
+                        
+                    }
+
+                }
+
+                .centre {
+                    flex: 3;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 10px;
+
+
+
+                    @include mobile{
+                        flex: 3;
+                    }
+
+                    span {
+                        font-size: 30px;
+                        font-weight: 500;
+
+                    }
+
+                    .info {
+                        
+                        width: 100%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-evenly;
+
+
+                        .item {
+                            gap: 5px;
+                            display: flex;
+                            align-items: center;
+                            color: themed("textColorsoft");
+
+                            span {
+                                font-size: 14px;
+                            }
+
+                        }
+
+
+
+                    }
+
+                    button {
+                        border: none;
+                        background-color: #5271ff;
+                        border-radius: 5px;
+                        padding: 10px 20px;
+                        color: white;
+                        cursor: pointer;
+
+                    }
+
+
+                }
+
+                .right {
+                    display: flex;
+                    flex: 1;
+                    justify-content: flex-end;
+                    gap: 5px;
+                    color: themed("textColorsoft");
+                    cursor: pointer;
+
+
+
+
+
+                }
+
+            }
+
+        }
+    }
+}

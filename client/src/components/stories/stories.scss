@@ -1,0 +1,77 @@
+@import "../../style.scss";
+
+.stories {
+    display: flex;
+    gap: 10px;
+    height: 200px;
+    margin-bottom: 30px;
+
+    @include mobile{
+        height: 80px;
+        justify-content: space-between;
+    }
+
+
+    .story {
+        flex: 1;
+        border-radius: 10px;
+        overflow: hidden;
+        position: relative;
+
+        @include mobile{
+            flex: none;
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+        }
+
+      
+
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+
+        }
+
+        span {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            color: white;
+            font-weight: 500;
+
+            @include mobile{
+                display: none;
+            }
+
+           
+        }
+
+        button {
+            position: absolute;
+            bottom: 40px;
+            left: 10px;
+            color: white;
+            background-color: #5271ff;
+            border: none;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
+            font-size: 25px;
+            justify-content: center;
+            align-items: center;
+
+            
+            @include mobile{
+                left: 0;
+                right: 0;
+                top: 0;
+                bottom: 0;
+                margin: auto;
+            }
+
+        }
+    }
+}
